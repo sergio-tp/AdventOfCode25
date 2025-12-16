@@ -42,8 +42,3 @@ def adv1():
     return count_cero(read_txt("adv1.txt"))
 
 adv1()
-
-lista = read_txt("adv1.txt")
-print(len(lista))
-print(parse_code("L1"))
-print(count_cero(read_txt("adv1.txt")))
