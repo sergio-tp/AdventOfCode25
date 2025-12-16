@@ -16,15 +16,13 @@ def count_cero(l: list) -> int:
     contador = 0
     for num in l:
         numero += parse_code(num)
-        if numero == 0:
-            contador += 1
-        if numero == 100:
+        if numero % 100 == 0:
             contador += 1
             numero = 0
         if numero > 100:
-            numero -= 100
+            numero = numero % 100
         if numero < 0:
-            numero += 100
+            numero = numero % 100 + 100
     return contador
 
 def read_txt(txt_path: str) -> list:
@@ -44,3 +42,8 @@ def adv1():
     return count_cero(read_txt("adv1.txt"))
 
 adv1()
+
+lista = read_txt("adv1.txt")
+print(len(lista))
+print(parse_code("L1"))
+print(count_cero(read_txt("adv1.txt")))
