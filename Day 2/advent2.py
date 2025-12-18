@@ -1,6 +1,9 @@
 def repeated_sequence(n: int) -> bool:
-    mitad = int(len(str(n))/2)
-    return int(n/(10**mitad)) == n % (10**mitad)
+    if (len(str(n)) % 2 != 0):
+        return False
+    else:
+        mitad = int(len(str(n))/2)
+        return int(n/(10**mitad)) == n % (10**mitad)
 
 def read_txt(txt_path: str) -> list:
     with open(txt_path) as txt:
