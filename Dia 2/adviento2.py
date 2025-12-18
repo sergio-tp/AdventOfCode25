@@ -1,16 +1,6 @@
-def num_to_list(n: int) -> list:
-    numero = n
-    l = []
-    while (numero >= 10):
-        l.append(numero % 10)
-        numero = int(numero / 10)
-    l.append(numero)
-    l.reverse()
-    return l
-
-def repeated_sequence(l: list) -> bool:
-    mitad = int(len(l)/2)
-    return l[:mitad] == l[mitad:]
+def repeated_sequence(n: int) -> bool:
+    mitad = int(len(str(n))/2)
+    return int(n/(10**mitad)) == n % (10**mitad)
 
 def read_txt(txt_path: str) -> list:
     with open(txt_path) as txt:
@@ -33,7 +23,7 @@ def adv2():
     lista = []
     for list in read_txt("adv2.txt"):
         for num in range (list[0], list[1]+1):
-            if repeated_sequence(num_to_list(num)):
+            if repeated_sequence(num):
                 lista.append(num)
     return sum(lista)
 
