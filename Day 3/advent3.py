@@ -51,7 +51,3 @@ def adv3():
 listaej = [987654321111111, 811111111111119, 234234234234278, 818181911112111]
 
 adv3()
-print(num_to_list(1987654321111111))
-print(largest_number(1987654321111111))
-print(largest_joltage(1987654321111111))
-print(largest_number(12345))
